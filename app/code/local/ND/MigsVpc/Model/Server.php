@@ -131,9 +131,7 @@ class ND_MigsVpc_Model_Server extends Mage_Payment_Model_Method_Abstract
     {        
         $fieldsArr = array();        
         $lengs = 0;        
-        $paymentInfo = $this->getInfoInstance();
-        
-        $this->validateByRMS();
+        $paymentInfo = $this->getInfoInstance();        
         
         $fields = array(
                     "vpc_AccessCode"=>$this->getAccessCode(),
@@ -153,7 +151,7 @@ class ND_MigsVpc_Model_Server extends Mage_Payment_Model_Method_Abstract
             //$str .= $val;
             $str .= $key . "=" . $val . "&";
         }
-
+        $str = rtrim($str, "&");
         //$secure_hash_key = strtoupper(md5($this->getSecureHashKey().$str));
         $secure_hash_key = strtoupper(hash_hmac('SHA256', $str, pack('H*',$this->getSecureHashKey()))); // New secured method
 
