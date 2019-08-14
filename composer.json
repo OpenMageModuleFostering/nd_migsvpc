@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/ND_MigsVpc",
+    "type": "magento-module",
+    "license": "GNU-General-Public-License",
+    "homepage": "",
+    "description": "Migs Vpc Payment Method Integration",
+    "authors": [
+    {
+        "name": "Nikul Doshi",
+        "email": "nikulonline@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
